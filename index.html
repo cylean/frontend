@@ -6,21 +6,66 @@
     <meta name="description" content="Визитка начинающего фронтенд-разработчика">
     <title>Моя визитка</title>
     <style>
-        /* Нормализация стилей */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-
-        /* Стили для визитки */
-        main { max-width: 600px; margin: 0 auto; text-align: center; }
-        img { 
-            width: 150px; 
-            height: 150px; 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
         }
         h1 { color: #333; margin-bottom: 10px; }
-        address { margin-top: 20px; font-style: normal; }
+        
+        /* Контейнеры */
+        .goals-container, .contacts-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Карточка проекта */
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 30px 0;
+        }
+        .project-card button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .project-card button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        
+        /* Контакты */
+        address {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            font-style: normal;
+        }
         button {
             padding: 10px 20px;
             background: #007BFF;
@@ -28,13 +73,22 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-bottom: 20px;
         }
-        button:hover { background: #0056b3; }
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        a { 
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff6b6b;
+            text-decoration: underline;
+        }
         ul { list-style: none; }
         li { margin: 10px 0; }
-        a { color: #007BFF; text-decoration: none; }
-        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -43,26 +97,34 @@
         <img src="https://pbs.twimg.com/media/GG47WuVXUAACqoX.jpg" alt="Мое фото">
         <p>Я начинающий фронтенд-разработчик. Учу HTML, CSS и JavaScript.</p>
 
-        <section>
+        <div class="goals-container">
             <h2>Мои цели:</h2>
             <ul>
                 <li>Развиваться во фронтенде</li>
                 <li>Написать свои пет-проекты</li>
                 <li>Найти работу</li>
             </ul>
+        </div>
+
+        <section class="project-card">
+            <h2>Мой первый проект</h2>
+            <p>Лендинг для кофейни (скоро будет!)</p>
+            <button onclick="alert('Проект в разработке!')">Посмотреть</button>
         </section>
 
-        <address>
-            <h2>Мои контакты:</h2>
-            <button onclick="window.location.href='mailto:jorinyar@gmail.com'">
-                Написать мне
-            </button>
-            <ul>
-                <li>Telegram: <a href="https://t.me/cylean" target="_blank" rel="noopener">@cylean</a></li>
-                <li>GitHub: <a href="https://github.com/cylean" target="_blank" rel="noopener">Мой профиль</a></li>
-                <li>Телефон: <a href="tel:+79991846382">+79991846382</a></li>
-            </ul>
-        </address>
+        <div class="contacts-container">
+            <address>
+                <h2>Мои контакты:</h2>
+                <button onclick="window.location.href='mailto:jorinyar@gmail.com'">
+                    Написать мне
+                </button>
+                <ul>
+                    <li>Telegram: <a href="https://t.me/cylean" target="_blank" rel="noopener">@cylean</a></li>
+                    <li>GitHub: <a href="https://github.com/cylean" target="_blank" rel="noopener">Мой профиль</a></li>
+                    <li>Телефон: <a href="tel:+79991846382">+79991846382</a></li>
+                </ul>
+            </address>
+        </div>
     </main>
 </body>
 </html>
