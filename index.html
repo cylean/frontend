@@ -6,20 +6,35 @@
     <meta name="description" content="Визитка начинающего фронтенд-разработчика">
     <title>Моя визитка</title>
     <style>
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
-        button {
-            padding: 8px 16px;
-            cursor: pointer;
-        }
-        
-        body {
-            background-color: #f0f0f0;
-        }
+        /* Нормализация стилей */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
 
+        /* Стили для визитки */
+        main { max-width: 600px; margin: 0 auto; text-align: center; }
+        img { 
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        h1 { color: #333; margin-bottom: 10px; }
+        address { margin-top: 20px; font-style: normal; }
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover { background: #0056b3; }
+        ul { list-style: none; }
+        li { margin: 10px 0; }
+        a { color: #007BFF; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
